@@ -7,7 +7,7 @@ Each day a new dated issue is published in Markdown, ready to read like a quick 
 
 **Weekly recap:** Every Sunday a `Weekly-YYYY-WW/README.md` issue is generated in `News/`.
 
-![Cryptocurrency mining equipment](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Cryptocurrency_Mining_Equipment.jpg/1280px-Cryptocurrency_Mining_Equipment.jpg)
+![Cryptocurrency mining equipment](https://upload.wikimedia.org/wikipedia/commons/1/1c/Cryptocurrency_Mining_Equipment.jpg)
 
 **Image credit:**  
 Cryptocurrency Mining Equipment by Yakijukiokhla (CC BY‑SA 4.0).
