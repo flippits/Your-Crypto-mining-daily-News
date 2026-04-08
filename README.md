@@ -13,7 +13,7 @@ Each day a new dated issue is published in Markdown, ready to read like a quick 
 
 **Magazine site:** Enable GitHub Pages from `/docs` to publish a clean front page.
 
-![Cryptocurrency mining equipment](https://upload.wikimedia.org/wikipedia/commons/1/1c/Cryptocurrency_Mining_Equipment.jpg)
+![Bitcoin mining farm](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Bitcoin_mining_farm.jpg/1280px-Bitcoin_mining_farm.jpg)
 
 **Image credit:**  
-Cryptocurrency Mining Equipment by Yakijukiokhla (CC BY‑SA 4.0).
+Bitcoin mining farm by Marko Ahtisaari (CC BY 2.0).

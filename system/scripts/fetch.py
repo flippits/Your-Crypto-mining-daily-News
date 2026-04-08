@@ -50,12 +50,12 @@ KEYWORD_RE = re.compile(r"\b(" + "|".join(re.escape(k) for k in KEYWORDS) + r")\
 
 MAGAZINE_IMAGES = [
     (
-        "https://upload.wikimedia.org/wikipedia/commons/1/1c/Cryptocurrency_Mining_Equipment.jpg",
-        "Cryptocurrency Mining Equipment by Yakijukiokhla (CC BY-SA 4.0)",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Bitcoin_mining_farm.jpg/1280px-Bitcoin_mining_farm.jpg",
+        "Bitcoin mining farm by Marko Ahtisaari (CC BY 2.0)",
     ),
     (
-        "https://upload.wikimedia.org/wikipedia/commons/1/1c/Cryptocurrency_Mining_Equipment.jpg",
-        "Cryptocurrency Mining Equipment by Yakijukiokhla (CC BY-SA 4.0)",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Bitcoin_mining_farm.jpg/1280px-Bitcoin_mining_farm.jpg",
+        "Bitcoin mining farm by Marko Ahtisaari (CC BY 2.0)",
     ),
 ]
 
