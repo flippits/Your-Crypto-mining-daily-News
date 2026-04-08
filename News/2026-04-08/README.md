@@ -2,7 +2,7 @@
 
 _A clean, daily crypto mining magazine with the best stories, market moves, and hardware updates — in plain language._
 
-![Cryptocurrency mining equipment](https://upload.wikimedia.org/wikipedia/commons/1/1c/Cryptocurrency_Mining_Equipment.jpg)
+![Cryptocurrency mining equipment](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Cryptocurrency_Mining_Equipment.jpg/1280px-Cryptocurrency_Mining_Equipment.jpg)
 
 ---
 
@@ -158,4 +158,3 @@ _Read more:_ https://news.bitcoin.com/zec-outperforms-bitcoin-with-25-surge-foll
 _More tomorrow. Stay secure and stay efficient._
 
 _Image credit:_ Cryptocurrency Mining Equipment by Yakijukiokhla (CC BY-SA 4.0)
-

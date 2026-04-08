@@ -48,7 +48,9 @@ KEYWORDS = [
 
 KEYWORD_RE = re.compile(r"\b(" + "|".join(re.escape(k) for k in KEYWORDS) + r")\b", re.I)
 
-MAGAZINE_IMAGE_URL = "https://upload.wikimedia.org/wikipedia/commons/1/1c/Cryptocurrency_Mining_Equipment.jpg"
+MAGAZINE_IMAGE_URL = (
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Cryptocurrency_Mining_Equipment.jpg/1280px-Cryptocurrency_Mining_Equipment.jpg"
+)
 MAGAZINE_IMAGE_CREDIT = "Cryptocurrency Mining Equipment by Yakijukiokhla (CC BY-SA 4.0)"
 
 GEAR_KEYWORDS = [
