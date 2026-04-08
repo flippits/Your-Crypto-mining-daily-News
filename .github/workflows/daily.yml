@@ -1,0 +1,32 @@
+name: Daily Crypto Mining Digest
+
+concurrency:
+  group: daily-crypto-mining-digest
+  cancel-in-progress: false
+
+on:
+  schedule:
+    - cron: "0 12 * * *" # 7am US Eastern during standard time (UTC-5); 8am during daylight time (UTC-4)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r system/requirements.txt
+      - name: Build digest
+        run: python system/scripts/fetch.py
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: daily crypto mining digest"
+          file_pattern: "News/**/README.md README.md"

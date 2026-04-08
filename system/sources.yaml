@@ -1,0 +1,19 @@
+sources:
+  - name: CoinDesk
+    url: https://www.coindesk.com/arc/outboundfeeds/rss/
+    scope: crypto
+  - name: Cointelegraph
+    url: https://cointelegraph.com/rss
+    scope: crypto
+  - name: Bitcoin Magazine
+    url: https://bitcoinmagazine.com/news/feed
+    scope: crypto
+  - name: 2Miners Blog
+    url: https://2miners.com/blog/feed
+    scope: mining
+  - name: Bitmain Blog
+    url: https://blog.bitmain.com/en/feed/?x=1
+    scope: mining
+  - name: Bitcoin.com News
+    url: https://news.bitcoin.com/feed
+    scope: crypto
