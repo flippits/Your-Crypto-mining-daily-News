@@ -412,7 +412,7 @@ def render_magazine(items: List[Item], date_str: str) -> str:
     lines.append("")
 
     render_section("Top Stories", general, 6)
-    render_section("Market Pulse", [i for i in news if \"market\" in (i.title + ' ' + i.summary).lower()][:4], 4)
+    render_section("Market Pulse", [i for i in news if "market" in (i.title + " " + i.summary).lower()][:4], 4)
     render_section("Mining & Hardware", gear, 4)
 
     lines.append("---")
