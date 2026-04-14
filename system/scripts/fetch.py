@@ -9,6 +9,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Iterable, List, Optional
 import subprocess
+import shutil
 import json
 
 import feedparser
@@ -458,40 +459,42 @@ def render_weekly(items: List[Item], week_start: datetime, week_end: datetime) -
 
     videos = [i for i in items if is_youtube(i.link)]
     news = [i for i in items if not is_youtube(i.link)]
-    gear = [i for i in news if is_gear_related(f\"{i.title} {i.summary}\")]
+    gear = [i for i in news if is_gear_related(f"{i.title} {i.summary}")]
     general = [i for i in news if i not in gear]
 
     def render_section(title: str, section_items: List[Item], max_items: int) -> None:
-        lines.append(f\"## {title}\")
-        lines.append(\"\")
+        lines.append(f"## {title}")
+        lines.append("")
         if not section_items:
-            lines.append(\"No items this week.\")
-            lines.append(\"\")
+            lines.append("No items this week.")
+            lines.append("")
             return
         for item in section_items[:max_items]:
             published = item.published[:10]
             summary = mini_article(item.summary)
-            lines.append(f\"### {item.title}\")
-            lines.append(f\"_Source: {item.source} · {published}_\")
-            lines.append(\"\")
+            lines.append(f"### {item.title}")
+            lines.append(f"_Source: {item.source} · {published}_")
+            lines.append("")
             if summary:
-                lines.append(f\"**Mini‑article:** {summary}\")
-            lines.append(\"\")
-            lines.append(f\"_Read more:_ {item.link}\")
-            lines.append(\"\")
+                lines.append(f"**Mini‑article:** {summary}")
+            lines.append("")
+            lines.append(f"_Read more:_ {item.link}")
+            lines.append("")
 
-    render_section(\"Top Stories\", general, 10)
-    render_section(\"Mining & Hardware\", gear, 6)
-    render_section(\"Videos\", videos, 6)
+    render_section("Top Stories", general, 10)
+    render_section("Mining & Hardware", gear, 6)
+    render_section("Videos", videos, 6)
 
-    lines.append(\"---\")
-    lines.append(\"\")
-    lines.append(f\"_Image credits:_ {hero_credit}; {cover_credit}\")
-    lines.append(\"\")
-    return \"\\n\".join(lines) + \"\\n\"
+    lines.append("---")
+    lines.append("")
+    lines.append(f"_Image credits:_ {hero_credit}; {cover_credit}")
+    lines.append("")
+    return "\n".join(lines) + "\n"
 
 
 def fetch_youtube_items(source: FeedSource, max_items: int = 6) -> List[Item]:
+    if not shutil.which("yt-dlp"):
+        raise RuntimeError("yt-dlp not installed")
     cookies_path = ROOT / "system" / "youtube_cookies.txt"
     try:
         cmd = [
